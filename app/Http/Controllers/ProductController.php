@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use function Ramsey\Uuid\v1;
+
 class ProductController extends Controller
 {
     /**
@@ -14,6 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         //
+        return view('product.index');
     }
 
     /**
@@ -24,6 +27,7 @@ class ProductController extends Controller
     public function create()
     {
         //
+        return view('product.create');
     }
 
     /**
@@ -57,6 +61,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
+        return view('product.edit');
     }
 
     /**
