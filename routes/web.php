@@ -26,6 +26,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/blogs',[BlogController::class ,'index'])->name('blogs.index');
+Route::post('/blogs',[BlogController::class ,'store'])->name('blogs.store');
 
 Route::middleware('auth')->group(function () {
     // Route::resource('blogs', BlogController::class);

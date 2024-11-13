@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blogs.index');
-
+        //
     }
 
     /**
@@ -37,19 +35,6 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'title'=>'required |max:225',
-            'content'=>'required',
-            'user_id'=>'required',
-
-        ]);
-        Blog::create([
-            'title'=>$request->title,
-            'content'=>$request->content,
-            'user_id'=>$request->user_id,
-
-
-        ]);
     }
 
     /**
